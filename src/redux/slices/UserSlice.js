@@ -3,7 +3,12 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const UserSlice = createSlice({
   name: "User",
-  initialState: {},
+  initialState: {
+    UserDetails: {
+      name: "Mohammad Sujon",
+      roles: "all",
+    },
+  },
   reducers: {
     SetUserDetails(state, action) {
       state.UserDetails = action.payload;

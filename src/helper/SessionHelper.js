@@ -1,12 +1,12 @@
 class SessionHelper {
-  static SetToken(accessToken) {
-    localStorage.setItem("accessToken", accessToken);
+  static SetAccessToken(AccessToken) {
+    localStorage.setItem("AccessToken", AccessToken);
   }
-  static GetToken() {
-    return localStorage.getItem("accessToken");
+  static GetAccessToken() {
+    return localStorage.getItem("AccessToken");
   }
-  static RemoveToken() {
-    return localStorage.removeItem("accessToken");
+  static RemoveAccessToken() {
+    return localStorage.removeItem("AccessToken");
   }
   static SetUserDetails(User) {
     localStorage.setItem("User", JSON.stringify(User));
@@ -36,13 +36,18 @@ class SessionHelper {
   static GetVerifyEmail() {
     return localStorage.getItem("VerifyEmail");
   }
+  static SetLanguage(Language) {
+    localStorage.setItem("i18nextLng", Language);
+  }
+  static GetLanguage() {
+    return localStorage.getItem("i18nextLng");
+  }
 
   static ResetStorage() {
-    localStorage.removeItem("accessToken");
+    localStorage.removeItem("AccessToken");
     localStorage.removeItem("User");
     localStorage.removeItem("OTPEmail");
     localStorage.removeItem("OTPCode");
-    return true;
   }
 }
 
